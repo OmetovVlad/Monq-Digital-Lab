@@ -1,0 +1,14 @@
+@import "fonts";
+
+
+*{
+    outline: none;
+}
+button, input[type=submit]{
+    box-shadow: none!important;
+}
+
+body{
+    min-width: 320px;
+}
+
