@@ -14,3 +14,55 @@ export function isWebp() {
 		document.documentElement.classList.add(className);
 	});
 }
+
+export function selects(){
+	//Открываем и закрываем селект
+	const selects = document.querySelectorAll('.select__head');
+
+	if (selects) {
+		selects.forEach(function (item) {
+			item.addEventListener("click", selectClick);
+			return true;
+		});
+	} 
+
+	function selectClick() {
+		let selected = document.querySelectorAll('.select--open');
+
+		if(this.parentNode.classList.contains('select--open')){
+			this.parentNode.classList.remove('select--open');
+		}  else {
+			if (selected.length > 0){
+				document.querySelector('.select--open').classList.remove('select--open');
+			}
+			this.parentNode.classList.add('select--open');
+		}
+	}
+
+	//Меняем заголовок и закрываем
+	const selectItems = document.querySelectorAll('.select__item-value');
+
+	if (selectItems) {
+		selectItems.forEach(function (item) {
+			item.addEventListener("click", selectItemClick);
+			return true;
+		});
+	} 
+
+	function selectItemClick() {
+		document.querySelector('.select--open').classList.remove('select--open');
+		console.log(this.textContent);
+		this.closest('.select').querySelector('.select__title').textContent = this.textContent;
+	}
+
+	//Закрываем по клику вне
+	document.addEventListener( 'click', (e) => {
+		if(document.getElementsByClassName('select--open').length > 0) {
+			const withinBoundaries = e.composedPath().includes( document.querySelector('.select--open') );
+			if(!withinBoundaries){
+				document.querySelector('.select--open').classList.remove('select--open');
+			}
+		}
+	})
+	
+}

@@ -1,0 +1,40 @@
+/*
+    Светлая тема
+*/
+$light__color-text-800: #0B0A0A;
+$light__color-text-500: #585050;
+$light__color-text-300: #887C7C;
+$light__color-text-200: #DFDADA;
+$light__color-text-100: #F8F8F8;
+
+$light__color-primary-700: #205EB0;
+$light__color-primary-500: #2A75DB;
+$light__color-primary-500--hover: #225eaf;
+$light__color-primary-100: #AAC9F1;
+
+$light__color-secondary-700: #B0B5BD;
+$light__color-secondary-500: #F8F8F8;
+$light__color-secondary-500--hover: #c6c6c6;
+
+/*
+    Темная тема
+*/
+$dark__color-text-800: #F3F3F3;
+$dark__color-text-500: #DFDADA;
+$dark__color-text-300: #887C7C;
+$dark__color-text-200: #585050;
+$dark__color-text-100: #1E1D1D;
+
+$dark__color-primary-700: #AAC9F1;
+$dark__color-primary-500: #B9D5FC;
+$dark__color-primary-500--hover: #94aaca;
+$dark__color-primary-100: #F0F6FF;
+
+$dark__color-secondary-700: #0C0D0D;
+$dark__color-secondary-500: #424242;
+$dark__color-secondary-500--hover: #353535;
+
+/*
+    Время анимации
+*/
+$animation-time: 0.25s;
