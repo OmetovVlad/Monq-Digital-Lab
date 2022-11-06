@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="dark-theme">
+<html lang="en">
     <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тестовое :: Monq Digital Lab</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20221106215000">
+    <link rel="stylesheet" href="css/style.min.css?_v=20221106230922">
 </head>
-    <body>
+    <body class="dark-theme">
         <div class="wrapper">
             <div class="wrapper__content">
                 <div class="container">
@@ -22,7 +22,7 @@
                                 <span>Company Title</span>
                             </div>
                             <div class="form__input">
-                                <input type="text" class="input-text" placeholder="Default" name="copanyName"/>
+                                <input type="text" class="input-text" placeholder="Default" name="copanyName" id="copanyName"/>
                             </div>
                         </div>
 
@@ -40,11 +40,11 @@
                                     </div>
                                     <div class="select__select-list">
                                         <label class="select__item">
-                                            <input class="select__item-radio" type="radio" name="firstDay" value="sunday" checked>
+                                            <input class="select__item-radio" type="radio" name="firstDay" value="Sunday" checked>
                                             <span class="select__item-value">Sunday</span>
                                         </label>
                                         <label class="select__item">
-                                            <input class="select__item-radio" type="radio" name="firstDay" value="monday">
+                                            <input class="select__item-radio" type="radio" name="firstDay" value="Monday">
                                             <span class="select__item-value">Monday</span>
                                         </label>
                                     </div>
@@ -66,11 +66,11 @@
                                     </div>
                                     <div class="select__select-list">
                                         <label class="select__item">
-                                            <input class="select__item-radio" type="radio" name="containerWidth" value="fixed" checked>
+                                            <input class="select__item-radio" type="radio" name="containerWidth" value="Fixed" checked>
                                             <span class="select__item-value">Fixed</span>
                                         </label>
                                         <label class="select__item">
-                                            <input class="select__item-radio" type="radio" name="containerWidth" value="full width">
+                                            <input class="select__item-radio" type="radio" name="containerWidth" value="Full width">
                                             <span class="select__item-value">Full width</span>
                                         </label>
                                     </div>
@@ -109,20 +109,20 @@
                                 <span>Indent Size</span>
                             </div>
                             <div class="form__input">
-                                <input type="text" class="input-text input-text--number" placeholder="Default"/>
+                                <input type="text" class="input-text input-text--number" placeholder="Default" id="indentSize"/>
                             </div>
                         </div>
 
                         <div class="form__line">
                             <div class="form__title">
-                                <span>Indent Size</span>
+                                <span>Personal Code</span>
                             </div>
                             <div class="form__input form__input--code">
-                                <input type="text" class="input-text input-text--number" placeholder="0000" maxlength="4"/>
+                                <input type="text" class="input-text input-text--number" placeholder="0000" maxlength="4" id="code1"/>
                                 <span>-</span>
-                                <input type="text" class="input-text input-text--number" placeholder="0000" maxlength="4"/>
+                                <input type="text" class="input-text input-text--number" placeholder="0000" maxlength="4" id="code2"/>
                                 <span>-</span>
-                                <input type="text" class="input-text input-text--number" placeholder="0000" maxlength="4"/>
+                                <input type="text" class="input-text input-text--number" placeholder="0000" maxlength="4" id="code3"/>
                                 <span class="form__input-deskr">12 digits</span>
                             </div>
                         </div>
@@ -144,7 +144,7 @@
                         </div>
 
                         <div class="form__line form__line--buttons">
-                            <input type="button" value="Apply and Save" class="input-button">
+                            <input type="button" value="Apply and Save" class="input-button" id="save">
                             <button class="input-outlined-button">Cancel</button>
                         </div>
                     </form>
@@ -159,6 +159,6 @@
                 </div>
             </div>
         </div>
-        <script src="js/app.min.js?_v=20221106215000"></script>
+        <script src="js/app.min.js?_v=20221106230922"></script>
     </body>
 </html>

@@ -79,11 +79,9 @@ a{
     }
 }
 
-html.dark-theme{
-    body{
-        color: $dark__color-text-500;
-        background: $dark__color-secondary-700;
-    }
+body.dark-theme{
+    color: $dark__color-text-500;
+    background: $dark__color-secondary-700;
     .wrapper{
         background-color: $dark__color-text-100;
     }

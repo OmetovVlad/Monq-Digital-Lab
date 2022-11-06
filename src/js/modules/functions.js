@@ -81,3 +81,110 @@ export function inputNumbers(){
 		});
 	}
 }
+
+export function saveData(){
+	const saveButton = document.getElementById('save');
+
+	if (saveButton) {
+		saveButton.onclick = function() {
+			
+			//Тема
+			var theme = document.getElementsByName('theme');
+
+			for (var i = 0; i < theme.length; i++) {
+				if (theme[i].checked){
+					localStorage.setItem('themeLocal', theme[i].value);
+				}
+			}
+
+			//Текстовые инпуты
+			var inputsText = document.querySelectorAll('.input-text');
+
+			for (i = 0; i < inputsText.length; i++) {
+				(function(element) {
+					var id = element.getAttribute('id');
+					sessionStorage.setItem(id, element.value);
+				})(inputsText[i]);
+			}
+
+			//homepage
+			var homepage = document.getElementsByName('homepage');
+
+			for (var i = 0; i < homepage.length; i++) {
+				if (homepage[i].checked){
+					localStorage.setItem('homepageLocal', homepage[i].value);
+					// console.log(localStorage.getItem('homepageLocal'));
+				}
+			}
+
+			//containerWidth
+			var containerWidth = document.getElementsByName('containerWidth');
+
+			for (var i = 0; i < containerWidth.length; i++) {
+				if (containerWidth[i].checked){
+					localStorage.setItem('containerWidthLocal', containerWidth[i].value);
+				}
+			}
+
+			//firstDay
+			var firstDay = document.getElementsByName('firstDay');
+
+			for (var i = 0; i < firstDay.length; i++) {
+				if (firstDay[i].checked){
+					localStorage.setItem('firstDayLocal', firstDay[i].value);
+				}
+			}
+			
+			localStorageData();
+		}
+	}
+
+}
+
+export function localStorageData (){
+	
+	//Тема
+	if(localStorage.getItem('themeLocal')) {
+		let themeLocal = localStorage.getItem('themeLocal');
+		let themeElement = document.querySelector('input[name="theme"][value="' + themeLocal + '"]');
+
+		themeElement.setAttribute('checked','checked');
+		document.querySelector('body').className = "";
+		document.querySelector('body').classList.add(themeLocal + "-theme");
+	}
+
+	//Текстовые инпуты
+	var inputsText = document.querySelectorAll('.input-text');
+
+	for (let k = 0; k < inputsText.length; k++) {
+		var id = inputsText[k].getAttribute('id');
+		inputsText[k].value = sessionStorage.getItem(id);
+	}
+
+	//homepage
+	if(localStorage.getItem('homepageLocal')) {
+		let homepageLocal = localStorage.getItem('homepageLocal');
+		let homepageElement = document.querySelector('input[name="homepage"][value="' + homepageLocal + '"]');
+		
+		homepageElement.setAttribute('checked','checked');
+		homepageElement.closest('.select').querySelector('.select__title').textContent = homepageLocal;
+	}
+
+	//containerWidth
+	if(localStorage.getItem('containerWidthLocal')) {
+		let containerWidthLocal = localStorage.getItem('containerWidthLocal');
+		let containerWidthElement = document.querySelector('input[name="containerWidth"][value="' + containerWidthLocal + '"]');
+		
+		containerWidthElement.setAttribute('checked','checked');
+		containerWidthElement.closest('.select').querySelector('.select__title').textContent = containerWidthLocal;
+	}
+
+	//firstDay
+	if(localStorage.getItem('firstDayLocal')) {
+		let firstDayLocal = localStorage.getItem('firstDayLocal');
+		let firstDayElement = document.querySelector('input[name="firstDay"][value="' + firstDayLocal + '"]');
+		
+		firstDayElement.setAttribute('checked','checked');
+		firstDayElement.closest('.select').querySelector('.select__title').textContent = firstDayLocal;
+	}
+}

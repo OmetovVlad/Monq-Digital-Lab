@@ -337,117 +337,117 @@
   margin-top: 8px;
 }
 
-html.dark-theme .input-text {
+.dark-theme .input-text {
   background: #585050;
   border-color: #887C7C;
   color: #F3F3F3;
 }
 
-html.dark-theme .input-text:hover {
+.dark-theme .input-text:hover {
   background: #887C7C;
 }
 
-html.dark-theme .input-text:focus {
+.dark-theme .input-text:focus {
   border-color: #B9D5FC;
 }
 
-html.dark-theme .input-button {
+.dark-theme .input-button {
   background: #B9D5FC;
   border-color: #B9D5FC;
   color: #1E1D1D;
 }
 
-html.dark-theme .input-button:hover {
+.dark-theme .input-button:hover {
   border-color: #94aaca;
   -webkit-box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.2);
           box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.2);
 }
 
-html.dark-theme .input-button:focus {
+.dark-theme .input-button:focus {
   border-color: #F0F6FF;
 }
 
-html.dark-theme .input-outlined-button {
+.dark-theme .input-outlined-button {
   background: #424242;
   border-color: #424242;
   color: #B9D5FC;
 }
 
-html.dark-theme .input-outlined-button:hover {
+.dark-theme .input-outlined-button:hover {
   border-color: #353535;
   -webkit-box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.2);
           box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.2);
 }
 
-html.dark-theme .input-outlined-button:focus {
+.dark-theme .input-outlined-button:focus {
   border-color: #B9D5FC;
 }
 
-html.dark-theme .select__head {
+.dark-theme .select__head {
   background: #585050;
   border: 1px solid #887C7C;
 }
 
-html.dark-theme .select__head_arrow_icon {
+.dark-theme .select__head_arrow_icon {
   color: #887C7C;
 }
 
-html.dark-theme .select__head:hover {
+.dark-theme .select__head:hover {
   background: #887C7C;
 }
 
-html.dark-theme .select__head:hover .select__head_arrow_icon {
+.dark-theme .select__head:hover .select__head_arrow_icon {
   color: #B9D5FC;
 }
 
-html.dark-theme .select__head:focus {
+.dark-theme .select__head:focus {
   border-color: #B9D5FC;
 }
 
-html.dark-theme .select__head:focus .select__head_arrow_icon {
+.dark-theme .select__head:focus .select__head_arrow_icon {
   color: #B9D5FC;
 }
 
-html.dark-theme .select__title {
+.dark-theme .select__title {
   color: #F3F3F3;
 }
 
-html.dark-theme .select__select-list {
+.dark-theme .select__select-list {
   background: #424242;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-html.dark-theme .select__item-value {
+.dark-theme .select__item-value {
   color: #F3F3F3;
 }
 
-html.dark-theme .select__item-value:hover {
+.dark-theme .select__item-value:hover {
   background: #585050;
 }
 
-html.dark-theme .select--open .select__head:hover {
+.dark-theme .select--open .select__head:hover {
   background: #585050;
   border-color: #887C7C;
 }
 
-html.dark-theme .radiobutton__title {
+.dark-theme .radiobutton__title {
   color: #DFDADA;
 }
 
-html.dark-theme .radiobutton__title:before {
+.dark-theme .radiobutton__title:before {
   border-color: #DFDADA;
 }
 
-html.dark-theme .radiobutton__title:after {
+.dark-theme .radiobutton__title:after {
   background: #B9D5FC;
 }
 
-html.dark-theme .radiobutton__input:checked + .radiobutton__title {
+.dark-theme .radiobutton__input:checked + .radiobutton__title {
   color: #F3F3F3;
 }
 
-html.dark-theme .radiobutton__input:checked + .radiobutton__title:before {
+.dark-theme .radiobutton__input:checked + .radiobutton__title:before {
   border-color: #B9D5FC;
 }
 
@@ -539,29 +539,29 @@ a:hover {
   color: #585050;
 }
 
-html.dark-theme body {
+body.dark-theme {
   color: #DFDADA;
   background: #0C0D0D;
 }
 
-html.dark-theme .wrapper {
+body.dark-theme .wrapper {
   background-color: #1E1D1D;
 }
 
-html.dark-theme a {
+body.dark-theme a {
   color: #AAC9F1;
   border-color: rgba(170, 201, 241, 0.2);
 }
 
-html.dark-theme a:hover {
+body.dark-theme a:hover {
   border-color: rgba(170, 201, 241, 0.75);
 }
 
-html.dark-theme .page-title__title {
+body.dark-theme .page-title__title {
   color: #F3F3F3;
 }
 
-html.dark-theme .page-title__deskr {
+body.dark-theme .page-title__deskr {
   color: #DFDADA;
 }
 
