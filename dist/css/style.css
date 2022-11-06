@@ -36,16 +36,12 @@
   font-style: normal;
 }
 
-html {
-  background: #F8F8F8;
-}
-
 .input-text {
   font-family: "Ubuntu";
   font-weight: 300;
   font-size: 14px;
   line-height: 1;
-  width: 196px;
+  width: 100%;
   border-radius: 6px;
   background: #DFDADA;
   border: 1px solid #887C7C;
@@ -118,12 +114,12 @@ html {
 
 .select {
   position: relative;
-  width: 196px;
+  width: 100%;
   z-index: 1;
 }
 
 .select__head {
-  width: 196px;
+  width: 100%;
   border-radius: 6px;
   background: #DFDADA;
   border: 1px solid #887C7C;
@@ -281,6 +277,9 @@ html {
   line-height: 24px;
   position: relative;
   color: #585050;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
   cursor: pointer;
 }
 
@@ -290,6 +289,9 @@ html {
   display: block;
   position: absolute;
   border-radius: 50%;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
 }
 
 .radiobutton__title:before {
@@ -331,8 +333,8 @@ html {
   opacity: 1;
 }
 
-html.dark-theme {
-  background: #1E1D1D;
+.radiobutton + .radiobutton {
+  margin-top: 8px;
 }
 
 html.dark-theme .input-text {
@@ -459,13 +461,188 @@ html.dark-theme .radiobutton__input:checked + .radiobutton__title:before {
           box-sizing: border-box;
 }
 
+html,
 body {
-  min-width: 320px;
-  font-family: "Ubuntu";
+  height: 100%;
 }
 
-svg path {
-  stroke: inherit;
-  stroke-width: inherit;
-  fill: inherit;
+body {
+  min-width: 1024px;
+  font-family: "Ubuntu";
+  margin: 0;
+  padding: 0;
+  background: #B0B5BD;
 }
+
+a {
+  color: #205EB0;
+  line-height: 18px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(32, 94, 176, 0.2);
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+a:hover {
+  border-color: rgba(32, 94, 176, 0.75);
+}
+
+.no-webp .wrapper{
+  background: #F8F8F8 url(../img/footer_bg.png) no-repeat center bottom; }
+
+.wrapper {
+  width: 1024px;
+  margin: 0 auto;
+  display: table;
+  height: 100%;
+}
+
+.wrapper__content {
+  display: table-row;
+  height: 100%;
+}
+
+.container {
+  padding: 32px;
+}
+
+.footer {
+  padding: 212px 32px 24px;
+  text-align: center;
+}
+
+.footer__text {
+  line-height: 18px;
+}
+
+.page-title {
+  padding-bottom: 32px;
+}
+
+.page-title__title {
+  font-family: Ubuntu;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 32px;
+  color: #0B0A0A;
+  margin: 0;
+}
+
+.page-title__deskr {
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: block;
+  margin-top: 4px;
+  color: #585050;
+}
+
+html.dark-theme body {
+  color: #DFDADA;
+  background: #0C0D0D;
+}
+
+html.dark-theme .wrapper {
+  background-color: #1E1D1D;
+}
+
+html.dark-theme a {
+  color: #AAC9F1;
+  border-color: rgba(170, 201, 241, 0.2);
+}
+
+html.dark-theme a:hover {
+  border-color: rgba(170, 201, 241, 0.75);
+}
+
+html.dark-theme .page-title__title {
+  color: #F3F3F3;
+}
+
+html.dark-theme .page-title__deskr {
+  color: #DFDADA;
+}
+
+.form {
+  width: 320px;
+}
+
+.form__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form__line + .form__line {
+  margin-top: 24px;
+}
+
+.form__line--buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 32px !important;
+}
+
+.form__line--buttons * + * {
+  margin-left: 16px;
+}
+
+.form__line .form__title {
+  width: 120px;
+  margin-right: 4px;
+}
+
+.form__line .form__title span {
+  display: block;
+  padding: 8px 0;
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__line .form__input {
+  display: block;
+  width: 196px;
+}
+
+.form__line .form__input--code {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form__line .form__input--code .input-text {
+  width: calc((100% - 48px) / 3);
+}
+
+.form__line .form__input--code span {
+  display: block;
+  width: 24px;
+  text-align: center;
+  padding: 8px;
+}
+
+.form__line .form__input-deskr {
+  width: 100% !important;
+  text-align: left !important;
+  padding: 0 !important;
+  margin-top: 4px;
+  display: block;
+  font-family: Ubuntu;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #887C7C;
+}
+
+.webp .wrapper{ background: #F8F8F8 url(../img/footer_bg.webp) no-repeat center bottom; }

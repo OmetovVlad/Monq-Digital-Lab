@@ -1,13 +1,11 @@
-html{
-    background: $light__color-text-100;
-}
+
 
 .input-text{
     font-family: 'Ubuntu';
     font-weight: 300;
     font-size: 14px;
     line-height: 1;
-    width: 196px;
+    width: 100%;
     border-radius: 6px;
     background: $light__color-text-200;
     border: 1px solid $light__color-text-300;
@@ -63,10 +61,10 @@ html{
 }
 .select{
     position: relative;
-    width: 196px;
+    width: 100%;
     z-index: 1;
     &__head{
-        width: 196px;
+        width: 100%;
         border-radius: 6px;
         background: $light__color-text-200;
         border: 1px solid $light__color-text-300;
@@ -193,12 +191,14 @@ html{
         line-height: 24px;
         position: relative;
         color: $light__color-text-500;
+        transition: all $animation-time;
         cursor: pointer;
         &:before, &:after{
             content: "";
             display: block;
             position: absolute;
             border-radius: 50%;
+            transition: all $animation-time;
         }
         &:before{
             left: 3px;
@@ -234,10 +234,12 @@ html{
             }
         }
     }
+    & + &{
+        margin-top: 8px;
+    }
 }
 
 html.dark-theme{
-    background: $dark__color-text-100;
     .input-text{
         background: $dark__color-text-200;
         border-color: $dark__color-text-300;

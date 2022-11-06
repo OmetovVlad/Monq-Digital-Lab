@@ -1,16 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-theme">
     <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тестовое :: Monq Digital Lab</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20221106143209">
+    <link rel="stylesheet" href="css/style.min.css?_v=20221106215000">
 </head>
     <body>
-        <div class="container">
-            123
+        <div class="wrapper">
+            <div class="wrapper__content">
+                <div class="container">
+                    <div class="page-title">
+                        <h1 class="page-title__title">Preferences</h1>
+                        <span class="page-title__deskr">On this page you can configure the main system parameters available for customization</span>
+                    </div>
+
+                    <form action="" class="form">
+                        <div class="form__line">
+                            <div class="form__title">
+                                <span>Company Title</span>
+                            </div>
+                            <div class="form__input">
+                                <input type="text" class="input-text" placeholder="Default" name="copanyName"/>
+                            </div>
+                        </div>
+
+                        <div class="form__line">
+                            <div class="form__title">
+                                <span>First Day</span>
+                            </div>
+                            <div class="form__input">
+                                <div class="select">
+                                    <div class="select__head" tabindex="0">
+                                        <span class="select__title">Sunday</span>
+                                        <div class="select__head_arrow">
+                                            <i class="select__head_arrow_icon">&#xe800;</i>
+                                        </div>
+                                    </div>
+                                    <div class="select__select-list">
+                                        <label class="select__item">
+                                            <input class="select__item-radio" type="radio" name="firstDay" value="sunday" checked>
+                                            <span class="select__item-value">Sunday</span>
+                                        </label>
+                                        <label class="select__item">
+                                            <input class="select__item-radio" type="radio" name="firstDay" value="monday">
+                                            <span class="select__item-value">Monday</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__line">
+                            <div class="form__title">
+                                <span>Container Width</span>
+                            </div>
+                            <div class="form__input">
+                                <div class="select">
+                                    <div class="select__head" tabindex="0">
+                                        <span class="select__title">Fixed</span>
+                                        <div class="select__head_arrow">
+                                            <i class="select__head_arrow_icon">&#xe800;</i>
+                                        </div>
+                                    </div>
+                                    <div class="select__select-list">
+                                        <label class="select__item">
+                                            <input class="select__item-radio" type="radio" name="containerWidth" value="fixed" checked>
+                                            <span class="select__item-value">Fixed</span>
+                                        </label>
+                                        <label class="select__item">
+                                            <input class="select__item-radio" type="radio" name="containerWidth" value="full width">
+                                            <span class="select__item-value">Full width</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__line">
+                            <div class="form__title">
+                                <span>Homepage</span>
+                            </div>
+                            <div class="form__input">
+                                <div class="select">
+                                    <div class="select__head" tabindex="0">
+                                        <span class="select__title">Starred Projects</span>
+                                        <div class="select__head_arrow">
+                                            <i class="select__head_arrow_icon">&#xe800;</i>
+                                        </div>
+                                    </div>
+                                    <div class="select__select-list">
+                                        <label class="select__item">
+                                            <input class="select__item-radio" type="radio" name="homepage" value="Starred Projects" checked>
+                                            <span class="select__item-value">Starred Projects</span>
+                                        </label>
+                                        <label class="select__item">
+                                            <input class="select__item-radio" type="radio" name="homepage" value="Index page">
+                                            <span class="select__item-value">Index page</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form__line">
+                            <div class="form__title">
+                                <span>Indent Size</span>
+                            </div>
+                            <div class="form__input">
+                                <input type="text" class="input-text input-text--number" placeholder="Default"/>
+                            </div>
+                        </div>
+
+                        <div class="form__line">
+                            <div class="form__title">
+                                <span>Indent Size</span>
+                            </div>
+                            <div class="form__input form__input--code">
+                                <input type="text" class="input-text input-text--number" placeholder="0000" maxlength="4"/>
+                                <span>-</span>
+                                <input type="text" class="input-text input-text--number" placeholder="0000" maxlength="4"/>
+                                <span>-</span>
+                                <input type="text" class="input-text input-text--number" placeholder="0000" maxlength="4"/>
+                                <span class="form__input-deskr">12 digits</span>
+                            </div>
+                        </div>
+
+                        <div class="form__line">
+                            <div class="form__title">
+                                <span>Theme</span>
+                            </div>
+                            <div class="form__input form__input--radio">
+                                <label class="radiobutton">
+                                    <input class="radiobutton__input" type="radio" name="theme" value="light" checked>
+                                    <span class="radiobutton__title">Light</span>
+                                </label>
+                                <label class="radiobutton">
+                                    <input class="radiobutton__input" type="radio" name="theme" value="dark">
+                                    <span class="radiobutton__title">Dark</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form__line form__line--buttons">
+                            <input type="button" value="Apply and Save" class="input-button">
+                            <button class="input-outlined-button">Cancel</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div class="wrapper__footer">
+                <div class="footer">
+                    <span class="footer__text">
+                        2020-2022 <a href="#">Terms of Service</a> and <a href="#">Conditions</a>
+                    </span>
+                </div>
+            </div>
         </div>
-        <script src="js/app.min.js?_v=20221106143209"></script>
+        <script src="js/app.min.js?_v=20221106215000"></script>
     </body>
 </html>

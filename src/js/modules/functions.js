@@ -51,7 +51,6 @@ export function selects(){
 
 	function selectItemClick() {
 		document.querySelector('.select--open').classList.remove('select--open');
-		console.log(this.textContent);
 		this.closest('.select').querySelector('.select__title').textContent = this.textContent;
 	}
 
@@ -65,4 +64,20 @@ export function selects(){
 		}
 	})
 	
+}
+
+export function inputNumbers(){
+	const inputCodeList = document.querySelectorAll('.input-text--number');
+
+	if (inputCodeList) {
+		inputCodeList.forEach(function (item) {
+			item.addEventListener("keyup", inputListener);
+			
+			function inputListener(){
+				let regex = /[0-9]|\./;
+
+				this.value = this.value.replace(/[a-zа-яё]/gi, '');
+			}
+		});
+	}
 }
